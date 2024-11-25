@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HASANAH</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="icon" type="image/x-icon" href="/UTS/Images/paviconhasanah.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='Hasanah.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    
+
+<body>
+    <div class="banner">
+        <!-- background video -->
+        <video autoplay loop muted playsinline>
+            <source src="/UTS/Images/videobackgroundhasanah2.MP4" type="video/mp4">
+        </video>
+        <!-- navigasi -->
+        <div class="navbar">
+            <img class="logo" src="/UTS/Images/logohasanah.png" alt="Logo">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars" id="menu-icon"></i>
+                <i class="fas fa-times" id="close-icon"></i>
+            </label>
+            <ul>
+                <li class="dropdown">
+                    <a href="#best-quotes">Quotes</a>
+                    <div class="dropdown-content">
+                        <a href="#best-quotes">Best Quotes</a>
+                        <a href="#love-quotes">Love Quotes</a>
+                        <a href="#worship-quotes">Worship Quotes</a>
+                    </div>
+                </li>
+                <li><a href="#">Hadiths</a></li>
+                <li><a href="#">Inspiring Watchlist</a></li>
+                <li><a href="#" id="nav-login-btn" >Login</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+        <!-- button explore -->
+        <div class="content">
+            <h1>Explore Quotes of Meaningful</h1>
+            <a class="button" href="#best-quotes">Explore</a>
+        </div>
+    </div>
+
+
+    <!-- form login/register -->
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close-outline"></ion-icon>
+        </span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" required placeholder=" ">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" required placeholder=" ">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
+                    <input type="text" required placeholder=" ">
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </span>
+                    <input type="email" required placeholder=" ">
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </span>
+                    <input type="password" required placeholder=" ">
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mendapatkan referensi ke elemen-elemen yang diperlukan
+        const wrapper = document.querySelector('.wrapper');
+        const navLoginBtn = document.querySelector('#nav-login-btn');
+        const iconClose = document.querySelector('.icon-close');
+        const registerLink = document.querySelector('.register-link');
+        const loginLink = document.querySelector('.login-link');
+
+        // Event listener untuk tombol login di navigasi
+        navLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('active-popup');
+        });
+
+        // Event listener untuk link register
+        registerLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.add('active');
+        });
+
+        // Event listener untuk link login
+        loginLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            wrapper.classList.remove('active');
+        });
+
+        // Event listener untuk tombol close
+        iconClose.addEventListener('click', () => {
+            wrapper.classList.remove('active-popup');
+            setTimeout(() => {
+                wrapper.classList.remove('active');
+            }, 200);
+        });
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+ 
+<br><br>
+    <!-- Quotes Card -->
+    <h2 class="section-title" id="best-quotes">Best Quotes</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="/UTS/Images/Quotes1.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes2.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes3.png">
+        </div>
+    </div><br><br>
+
+    <h2 class="section-title1" id="love-quotes">Love Quotes</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="/UTS/Images/Quotes4.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes5.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes6.png">
+        </div>
+    </div><br><br>
+
+    <h2 class="section-title2" id="worship-quotes">Worship Quotes</h2>
+    <div class="card-container">
+        <div class="card">
+            <img src="/UTS/Images/Quotes7.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes8.png">
+        </div>
+        <div class="card">
+            <img src="/UTS/Images/Quotes9.png">
+        </div>
+    </div><br><br><br>
+
+<!-- sidebar kutipan ulama dan jam sholat -->
+<div class="sidebar">
+    <div class="side-quote">
+        <h2 style="color: white; padding-bottom: 10px;">Kutipan Ulama</h2>
+        <div class="quote-ulama">
+            <p>"Ketahuilah bahwa kamu telah menciptakan musuh yang hidup bersamamu, dan dia adalah dirimu sendiri yang selalu menuntut keinginan duniawi."</p>
+            <div class="author">- Imam Al-Ghazali</div>
+        </div>
+        <div class="quote-ulama">
+            <p>"Perang terbesar adalah melawan kelemahan dan kejahatan diri sendiri."</p>
+            <div class="author">- Imam Al-Ghazali</div>
+        </div>
+        <div class="quote-ulama">
+            <p>"Jangan biarkan hari-harimu berlalu tanpa meninggalkan kebaikan."</p>
+            <div class="author">- Imam Al-Ghazali</div>
+        </div>
+        <div class="quote-ulama">
+            <p> "Jadikan akhirat di hatimu, dunia di tanganmu, dan kematian di pelupuk matamu."</p>
+            <div class="author">- Imam Syafi'i</div>
+        </div>
+        <div class="quote-ulama">
+            <p>"Jika kamu tidak tahan terhadap penatnya belajar, maka kamu akan menanggung bahayanya kebodohan."</p>
+            <div class="author">- Imam Syafi'i</div>
+        </div>
+        <div class="quote-ulama">
+            <p>"Kebahagiaan sejati terletak pada hati yang ridha dengan takdir Allah SWT."</p>
+            <div class="author">- Imam Syafi'i</div>
+        </div>
+    </div>
+
+    <div class="prayer-times">
+        <h2 style="color:white; padding-top: 15px;">Waktu Sholat</h2>
+        <div class="prayer-time">
+            <span class="prayer-name">Subuh</span>
+            <span class="prayer-hour">04:04</span>
+        </div>
+        <div class="prayer-time">
+            <span class="prayer-name">Dzuhur</span>
+            <span class="prayer-hour">11:41</span>
+        </div>
+        <div class="prayer-time">
+            <span class="prayer-name">Ashar</span>
+            <span class="prayer-hour">15:05</span>
+        </div>
+        <div class="prayer-time">
+            <span class="prayer-name">Maghrib</span>
+            <span class="prayer-hour">17:54</span>
+        </div>
+        <div class="prayer-time">
+            <span class="prayer-name">Isya</span>
+            <span class="prayer-hour">19:09</span>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- #pernahkahkamu? -->
+<h2 class="pernahkah-content">#PERNAHKAHKAMU?</h2>
+<div class="scroll-container" >
+    <img src="/UTS/Images/pernahkahkamu3.png" alt="Jatuh Cinta" style="width:400px; height: 400px;">
+    <img src="/UTS/Images/pernahkahkamu1.png" alt="Berbohong" style="width:400px; height: 400px;">
+    <img src="/UTS/Images/pernahkahkamu2.png" alt="Ghibah" style="width:400px; height: 400px;">
+    <img src="/UTS/Images/pernahkahkamu4.png" alt="Berkata Kasar" style="width:400px; height: 400px;">
+</div>
+ 
+<br><br>
+
+<!-- about -->
+<div class="about-container">
+    <img src="/UTS/Images/logohasanah.png" class="about-image" alt="Logo">
+    <div class="about-text">
+        <h3 id="about">ABOUT US</h3>
+        <p>This website shares Islamic quotes and motivational messages, serving as a source of encouragement and inspiration. 
+            It offers positive values and energy to anyone seeking strength. 
+            Additionally, it functions as a personal reminder for its creator, 
+            bearing the name <i>HASANAH</i>, which is derived from the creator's name.</p>
+    </div>
+    <div class="about-channel">
+        <h4>Join Our Channel</h4>
+        <div class="socialIcons">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+            </ul>
+        </div>
+    </div>  
+</div>
+
+<!-- footer -->
+<footer>
+<div class="footerBottom">
+    <p>&copy;2024 Designed by <span class="designer">Nida Hasanah</span></p>
+</div>
+</footer>
+
+</body>
+</html>
